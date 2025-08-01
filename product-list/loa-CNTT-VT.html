@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/newImages/logoSmall_ABCSolutions.png" />
+  <title>Loa IoT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/templatemo-sixteen.css" />
+  <link rel="stylesheet" href="../assets/css/product-list.css" />
+</head>
+
+<body>
+  <header class="">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <div class="logo">
+            <img class="logo-image" src="../assets/newImages/ABCS_Logo.png" alt="ABC's Clothing Logo" />
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><img src="../assets/newImages/icons8-menu-50.png" alt="Menu Icon" /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Trang chủ
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../products.html">Sản phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about.html">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact.html">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-pro">
+    <!-- Header + Image -->
+    <div class="row">
+      <div class="left">
+        <h1>GIẢI PHÁP LOA IOT</h1>
+        <hr style="border-top: 2px solid #ccc; width: 60px; margin: 10px auto" />
+        <h2>Cụm thu phát thanh ứng dụng CNTT-VT</h2>
+        <h3>15.000.000 VNĐ</h3>
+        <button id="buyBtn" class="buy-button">Mua hàng</button>
+
+        <!-- Hộp thoại hiện giá và thông tin -->
+        <div id="buyModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cụm thu phát thanh ứng dụng CNTT-VT</h2>
+            <h3>Giá: 15.000.000 VNĐ</h3>
+            <p>Vui lòng liên hệ để đặt hàng:</p>
+            <ul>
+              <li>SĐT: 028 2200 5526 (Mr. Nhân)</li>
+              <li>Email: infos.abcsolutions@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <a href="#"><img src="../assets/products/LoaIoT.png" alt=""
+            style="max-width: 45%; height: auto; margin-left: 120px" /></a>
+      </div>
+    </div>
+
+    <hr style="border: none; border-top: 1px solid #ddd; margin: 40px 0" />
+    <!-- Specifications Section -->
+    <h3>Thông số kỹ thuật</h3>
+    <hr style="border-top: 2px solid #ccc; width: 60px; margin-left: 0" />
+    <div class="spec-grid">
+      <div class="spec-group">
+        <div class="spec-title">Kết nối mạng Internet</div>
+        <p>
+          Ethernet (LAN/Wan)<br />
+          Wifi<br />
+          3G/4G
+        </p>
+
+        <div class="spec-title">Tổng công suất ra loa</div>
+        <p>200W</p>
+
+        <div class="spec-title">Sream âm thanh từ HTTT nguồn</div>
+        <p>
+          RTMP<br />
+          RTMPS<br />
+          HTTP Live Streaming (HLS)
+        </p>
+      </div>
+      <div class="spec-group">
+        <div class="spec-title">Tiêu chuẩn kháng nước</div>
+        <p>IP67</p>
+
+        <div class="spec-title">Thu được nội dung số hoá</div>
+        <p>Đài phát thanh, truyền thanh 3 cấp</p>
+
+        <div class="spec-title">Chuẩn giao tiếp</div>
+        <p>
+          MQTT/MQTTs<br />
+          HTTP/HTTPs (REST API)
+        </p>
+      </div>
+
+      <div class="spec-group">
+        <div class="spec-title">Đáp ứng tiêu chuẩn, quy chuẩn</div>
+        <p>
+          QCVN 117-2020/BTTTT<br />
+          ISO 9001:2015
+        </p>
+
+        <div class="spec-title">Hệ điều hành</div>
+        <p>Linux (Armbian)</p>
+
+        <div class="spec-title">Orange Pi LTS 3GB RAM</div>
+        <p>
+          6 core = Dual-Core-A72<br />
+          Cortex-A53 1.4GHz<br />
+          3GB RAM<br />
+          Micro SB 16GB<br />
+          HDMI, UART, GPIO
+        </p>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-row" style="display: flex; gap: 2rem">
+      <div class="features-right" style="flex: 1">
+        <h3>Các tính năng</h3>
+        <hr style="border-top: 2px solid #ccc; width: 60px; margin-left: 0" />
+
+        <div style="display: flex; gap: 2rem">
+          <ul style="flex: 1; padding-left: 1rem">
+            <li>Đồng bộ lịch phát</li>
+            <li>
+              Điều khiển từ xa: Dừng, phát lịch; Âm lượng; Relay loa; Kiểm tra
+              âm thanh cụm loa
+            </li>
+            <li>Nhật ký phát thanh</li>
+            <li>Điều khiển ghi âm</li>
+            <li>Lấy thông tin tài khoản SIM, nạp tiền</li>
+            <li>GPS, thông tin thiết bị</li>
+          </ul>
+          <ul style="flex: 1; padding-left: 1rem">
+            <li>Lệnh điều khiển SSH</li>
+            <li>Điều khiển cập nhật code</li>
+            <li>Điều khiển update toàn bộ lịch phát thanh</li>
+            <li>Phát thông báo khẩn cấp</li>
+            <li>
+              Tiếp sóng FM và các kênh/đài radio theo chuẩn audio streaming
+            </li>
+            <li>
+              Tự động phát hiện và khôi phục hệ thống trong tình huống hệ
+              thống bị treo
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="features-row">
+      <div class="features-full">
+        <h2 style="color: #002776; font-weight: 800; margin-bottom: 20px">
+          Đáp ứng văn bản nhà nước về truyền thông ứng dụng CNTT-VT
+        </h2>
+
+        <div class="document-item">
+          <h3 style="color: #002776; margin-bottom: 10px">
+            <span class="document-check">✔</span> Công văn số 1273/BTTTT-TTCS
+            ngày 27/04/2021
+          </h3>
+          <p>
+            Hướng dẫn về yêu cầu chức năng, tính năng kỹ thuật của Hệ thống
+            thông tin nguồn trung ương và Hệ thống thông tin nguồn cấp tỉnh
+            (Phiên bản 1.0)
+          </p>
+        </div>
+
+        <div class="document-item">
+          <h3 style="color: #002776; margin-bottom: 10px">
+            <span class="document-check">✔</span> Thông tư số 39/2020/TT-BTTTT
+            ngày 24/11/2020 của Bộ Thông tin và Truyền thông
+          </h3>
+          <p>
+            Quy định về quản lý đài truyền thanh cấp xã ứng dụng công nghệ
+            thông tin - viễn thông
+          </p>
+        </div>
+
+        <div class="document-item">
+          <h3 style="color: #002776; margin-bottom: 10px">
+            <span class="document-check">✔</span> Công văn 624/BTTTT-TTCS của
+            Bộ Thông Tin và Truyền thông 27/02/2023
+          </h3>
+          <p>
+            Triển khai thiết lập mới, nâng cấp đài truyền thanh có dây/không
+            dây FM sang truyền thanh ứng dụng CNTT-VT
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Các lĩnh vực hoạt động</h4>
+        <ul class="activity-list">
+          <li>Mua và bán thiết bị và máy móc;</li>
+          <li>Thiết kế phần cứng mạch ứng dụng;</li>
+          <li>Xuất bản phần mềm;</li>
+          <li>...</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Liên hệ</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> (028) 22 00 55 26</p>
+          <p><i class="fas fa-envelope"></i> infos.abcsolutions@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>ABC SOLUTIONS</h4>
+        <div class="address">
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 82/2B, Đường Huỳnh Văn Nghệ,
+            Phường 15 , Quận Tân Bình,Thành phố Hồ Chí Minh
+          </p>
+        </div>
+        <a href="https://www.google.com/maps/place/82%2F2B+Huỳnh+Văn+Nghệ,+Phường+15,+Tân+Bình,+Hồ+Chí+Minh/@10.8186142,106.6316047,17z/data=!3m1!4b1!4m6!3m5!1s0x31752961a3b95ad1:0x7aa76dfeaa11809a!8m2!3d10.8186142!4d106.6316047!16s%2Fg%2F11k46vjyzg?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" class="map-link">
+          <i class="fas fa-map-marked-alt"></i> Mở trong Google map
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="footer-logo">
+          <img src="../assets/newImages/ABCS_Logo.png" alt="ABC SOLUTIONS Logo" />
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 ABC SOLUTIONS. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const modal = document.getElementById("buyModal");
+    const btn = document.getElementById("buyBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+  <script>
+    // Khai báo các media queries
+    const smallScreenQuery = window.matchMedia("(max-width: 480px)");
+    const mediumScreenQuery = window.matchMedia(
+      "(min-width: 481px) and (max-width: 767px)"
+    );
+    const largeScreenQuery = window.matchMedia(
+      "(min-width: 768px) and (max-width: 991px)"
+    );
+
+    function handleResponsiveImg() {
+      const img = document.querySelector(".right a img");
+
+      if (smallScreenQuery.matches) {
+        // ≤ 480px (Mobile nhỏ)
+        img.style.marginLeft = "0";
+        img.style.maxWidth = "45%";
+      } else if (mediumScreenQuery.matches) {
+        // 481px - 767px (Mobile lớn/Tablet nhỏ)
+        img.style.marginLeft = "0";
+        img.style.maxWidth = "45%";
+      } else if (largeScreenQuery.matches) {
+        // 768px - 991px (Tablet lớn)
+        img.style.marginLeft = "0";
+        img.style.maxWidth = "45%";
+      } else {
+        // ≥ 992px (Desktop)
+        img.style.marginLeft = "120px";
+        img.style.maxWidth = "45%";
+      }
+    }
+
+    // Gán sự kiện listener cho tất cả media queries
+    smallScreenQuery.addListener(handleResponsiveImg);
+    mediumScreenQuery.addListener(handleResponsiveImg);
+    largeScreenQuery.addListener(handleResponsiveImg);
+
+    // Chạy lần đầu khi load trang
+    handleResponsiveImg();
+  </script>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Additional Scripts -->
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/owl.js"></script>
+  <script src="../assets/js/slick.js"></script>
+  <script src="../assets/js/isotope.js"></script>
+  <script src="../assets/js/accordions.js"></script>
+
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) {
+      //declaring the array outside of the
+      if (!cleared[t.id]) {
+        // function makes it static and global
+        cleared[t.id] = 1; // you could use true and false, but that's more typing
+        t.value = ""; // with more chance of typos
+        t.style.color = "#fff";
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/newImages/logoSmall_ABCSolutions.png" />
+  <title>BKIT ARM4</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/product-list.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/templatemo-sixteen.css" />
+  <style>
+    .kit-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 40px;
+      gap: 40px;
+    }
+
+    .kit-left {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+
+    .kit-left h2 {
+      color: #002776;
+      font-weight: 800;
+      font-size: 28px;
+    }
+
+    .kit-divider {
+      border: none;
+      border-top: 2px solid #ccc;
+      width: 60px;
+      margin: 10px 0;
+    }
+
+    .kit-block {
+      margin-bottom: 20px;
+    }
+
+    .kit-title {
+      font-weight: bold;
+      color: #002776;
+    }
+
+    .kit-right {
+      position: relative;
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .kit-right img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .slideshow-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+      z-index: 10;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .nav-button.prev {
+      left: 10px;
+    }
+
+    .nav-button.next {
+      right: 10px;
+    }
+
+    .kit-right:hover .nav-button {
+      opacity: 1;
+    }
+
+    .nav-button {
+      opacity: 0;
+    }
+
+    @media (max-width: 768px) {
+      .kit-right {
+        flex-direction: column;
+      }
+
+      .kit-right img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<header class="">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <div class="logo">
+          <img class="logo-image" src="../assets/newImages/ABCS_Logo.png" alt="ABC's Clothing Logo" />
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><img src="../assets/newImages/icons8-menu-50.png" alt="Menu Icon" /></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Trang chủ
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../products.html">Sản phẩm</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Liên hệ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <div class="container-pro">
+    <!-- Header + Image -->
+    <div class="row">
+      <div class="left">
+        <h1>KIT THÍ NGHIỆM BKIT ARM4</h1>
+        <hr style="border-top: 2px solid #ccc; width: 60px; margin: 10px auto" />
+        <h2>
+          Kit thí nghiệm Vi điều khiển, Hệ thống nhúng, IoT dựa trên công nghệ
+          STM32F4
+        </h2>
+        <h3 style="margin-top: 7px">5.000.000 VNĐ</h3>
+        <hr style="border-top: 2px solid #ccc; width: 60px; margin: 10px auto" />
+
+        <div class="mt-4">
+          <a href="https://github.com/infos-abcsolutions" target="_blank" style="color: #007bff; text-decoration: none">
+            Link GitHub Source Code các bài Labs
+          </a>
+          <br />
+          <a href="https://abcsolutions.com.vn/wp-content/uploads/2023/11/KitThiNghiem_STM32_ARM4_QuickStartGuide_20231027_1027.pdf"
+            target="_blank" style="color: #007bff; text-decoration: none">
+            Quick Start Guide
+          </a>
+        </div>
+        <!-- Nút Mua hàng -->
+        <button id="buyBtn" class="buy-button">Mua hàng</button>
+
+        <!-- Hộp thoại hiện giá và thông tin -->
+        <div id="buyModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>
+              Kit thí nghiệm BKIT ARM4
+            </h2>
+            <h3>Giá: 5.000.000 VNĐ</h3>
+            <p>Vui lòng liên hệ để đặt hàng:</p>
+            <ul>
+              <li>SĐT:028 2200 5526 (Mr. Nhân)</li>
+              <li>Email: infos.abcsolutions@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <a href="#"><img src="../assets/products/Kit_TN_Arm_WhiteBackground-6.png" alt="" /></a>
+      </div>
+    </div>
+
+    <hr style="border: none; border-top: 1px solid #ddd; margin: 40px 0" />
+
+    <!-- Specifications Section -->
+    <h3>Thông số kỹ thuật</h3>
+    <hr style="border-top: 2px solid #ccc; width: 60px; margin-left: 0" />
+    <div class="spec-grid">
+      <div class="spec-group">
+        <div class="spec-title">CHIP xử lý - STM32F407ZGT6</div>
+        <p>
+          Tần số tối đa: 168MHz<br />
+          RAM: 128 KB <br />
+          Flash: 1024 KB
+        </p>
+
+        <div class="spec-title">Công cụ Debug onboard</div>
+        <p>ST-LINK/V2</p>
+
+        <div class="spec-title">Nguồn</div>
+        <p>12-24VDC</p>
+        <div class="spec-title">Key Matrix onboard</div>
+        <p>4x4</p>
+      </div>
+      <div class="spec-group">
+        <div class="spec-title">Module SIM onboard</div>
+        <p>A7670C</p>
+
+        <div class="spec-title">Module RTC onboard</div>
+        <p>DS3231</p>
+
+        <div class="spec-title">LCD Touch Screen onboard</div>
+        <p>
+          Độ phân giải: 240*320 RGB<br />
+          Cảm ứng điện trở: XPT2046<br />
+          Driver: IL9341
+        </p>
+        <div class="spec-title">Cảm biến onboard</div>
+        <p>
+          Cảm biến ánh sáng, nhiệt độ <br />
+          Biến trở (giả lập Analog sensor)
+        </p>
+      </div>
+
+      <div class="spec-group">
+        <div class="spec-title">Memory</div>
+        <p>
+          RAM: 192 KB<br />
+          Eeprom: 512 Kbit (AT24C512)<br />
+          SRAM: 8 Mbit (IS61LV51216)
+        </p>
+
+        <div class="spec-title">Hỗ trợ giao tiếp</div>
+        <p>
+          RS232<br />
+          RS485<br />
+          CAN
+        </p>
+
+        <div class="spec-title">Module ESP8266</div>
+        <p>
+          Wifi<br />
+          Ethernet (ENC28J60)y<br />
+          SD card
+        </p>
+      </div>
+    </div>
+
+    <div class="kit-section">
+      <div class="kit-left">
+        <h2>KIT Thí nghiệm BKIT ARM4 phục vụ</h2>
+        <hr class="kit-divider" />
+
+        <div class="kit-block">
+          <p class="kit-title">Giảng dạy và học tập</p>
+          <p>Vi xử lý - Vi điều khiển, Hệ thống nhúng, IoT</p>
+        </div>
+
+        <div class="kit-block">
+          <p class="kit-title">Khảo sát kiến thức trên thực tế bo mạch</p>
+          <p>
+            Những giao thức, giao tiếp phần cứng: UART, SPI, CAN, USB, GPIO,
+            ...
+          </p>
+        </div>
+
+        <div class="kit-block">
+          <p class="kit-title">Hiện thực dự án, thử nghiệm hệ thống</p>
+          <p>
+            Hiện thực những giải pháp thử nghiệm Hệ thống nhúng, hoặc các ứng
+            dụng IoT
+          </p>
+        </div>
+
+        <div class="kit-block">
+          <p class="kit-title">Thống kê, phân tích và quản lý hệ thống</p>
+          <p>
+            Phân tích hiệu quả phòng thông qua các báo cáo, biểu đồ và dữ liệu
+            hoạt động phòng.
+          </p>
+        </div>
+      </div>
+
+      <div class="kit-right">
+        <img id="slideshow-image" src="../assets/products/BlockDiagram_resire1850x1000-1850x1000_c.png"
+          alt="Kit Image" />
+        <!-- Nút chuyển trái phải -->
+        <button class="nav-button prev" onclick="prevImage()">
+          &#10094;
+        </button>
+        <button class="nav-button next" onclick="nextImage()">
+          &#10095;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Các lĩnh vực hoạt động</h4>
+        <ul class="activity-list">
+          <li>Mua và bán thiết bị và máy móc;</li>
+          <li>Thiết kế phần cứng mạch ứng dụng;</li>
+          <li>Xuất bản phần mềm;</li>
+          <li>...</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Liên hệ</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-phone"></i> (028) 22 00 55 26</p>
+          <p><i class="fas fa-envelope"></i> infos.abcsolutions@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>ABC SOLUTIONS</h4>
+        <div class="address">
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 82/2B, Đường Huỳnh Văn Nghệ,
+            Phường 15 , Quận Tân Bình,Thành phố Hồ Chí Minh
+          </p>
+        </div>
+        <a href="https://www.google.com/maps/place/82%2F2B+Huỳnh+Văn+Nghệ,+Phường+15,+Tân+Bình,+Hồ+Chí+Minh/@10.8186142,106.6316047,17z/data=!3m1!4b1!4m6!3m5!1s0x31752961a3b95ad1:0x7aa76dfeaa11809a!8m2!3d10.8186142!4d106.6316047!16s%2Fg%2F11k46vjyzg?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" class="map-link">
+          <i class="fas fa-map-marked-alt"></i> Mở trong Google map
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="footer-logo">
+          <img src="../assets/newImages/ABCS_Logo.png" alt="ABC SOLUTIONS Logo" />
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 ABC SOLUTIONS. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const images = [
+      "../assets/products/BlockDiagram_resire1850x1000-1850x1000_c.png",
+      "../assets/products/Kit_TN_Arm_FocusOnModule_Communicate_resire1850x1000-1850x1000_c.png",
+      "../assets/products/Kit_TN_Arm_FocusOnModule_STM32_ARM4_resire1850x1000-1850x1000_c.png",
+      "../assets/products/Kit_TN_Arm_FocusOnModule_Interact_resire1850x1000-1850x1000_c.png",
+      "../assets/products/Connect12VAdapterUSBTypeCToKit_resire1850x1000-1850x1000_c.png",
+    ];
+
+    let currentIndex = 0;
+    const imageElement = document.getElementById("slideshow-image");
+
+    function showImage(index) {
+      imageElement.src = images[index];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+  </script>
+
+  <script>
+    const modal = document.getElementById("buyModal");
+    const btn = document.getElementById("buyBtn");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Additional Scripts -->
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/owl.js"></script>
+  <script src="../assets/js/slick.js"></script>
+  <script src="../assets/js/isotope.js"></script>
+  <script src="../assets/js/accordions.js"></script>
+
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) {
+      //declaring the array outside of the
+      if (!cleared[t.id]) {
+        // function makes it static and global
+        cleared[t.id] = 1; // you could use true and false, but that's more typing
+        t.value = ""; // with more chance of typos
+        t.style.color = "#fff";
+      }
+    }
+  </script>
+</body>
+
+</html>
