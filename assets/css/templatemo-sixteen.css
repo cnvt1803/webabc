@@ -1036,10 +1036,8 @@ header {
 }
 
 .team-member .down-content span {
-  display: block;
   font-size: 20px;
   color: #f33f3f;
-  font-weight: 500;
   margin-bottom: 20px;
 }
 
