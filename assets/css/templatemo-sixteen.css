@@ -5,8 +5,10 @@ TemplateMo 546 Sixteen Clothing
 https://templatemo.com/tm-546-sixteen-clothing
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -107,7 +109,7 @@ a.filled-button:hover {
 }
 
 .contact-heading {
-  background-image: url(../images/contact-heading.jpg);
+  background-image: url(../newImages/contact-heading.jpg);
 }
 
 .page-heading {
