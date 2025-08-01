@@ -151,6 +151,7 @@ ul.with-tick li::before {
 }
 .buy-button {
   margin-top: 30px;
+  margin-bottom: 10px;
   background: linear-gradient(135deg, #007bff, #0056d2);
   color: white;
   padding: 12px 28px;
