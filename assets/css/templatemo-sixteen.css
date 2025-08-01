@@ -986,6 +986,7 @@ header {
 .team-member .down-content {
   padding: 30px;
   text-align: center;
+  height: 400px;
 }
 
 .team-member .thumb-container {
@@ -1030,15 +1031,21 @@ header {
 }
 
 .team-member .down-content h4 {
-  font-size: 17px;
+  font-size: 20px;
   color: #1a6692;
   margin-bottom: 8px;
+  font-weight: bolder;
 }
 
 .team-member .down-content span {
-  font-size: 20px;
-  color: #f33f3f;
+  font-size: 18px;
+  color: #1a6692;
   margin-bottom: 20px;
+}
+.team-member .down-content p span {
+  font-weight: bold;
+  color: gray;
+  font-size: 16px;
 }
 
 .text-center {
