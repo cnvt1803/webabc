@@ -78,7 +78,7 @@ h3 {
 
 .spec-group p {
   margin-top: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -213,7 +213,7 @@ ul.with-tick li::before {
 .modal-content p {
   margin: 0 0 5px;
   color: #666;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
 }
 
