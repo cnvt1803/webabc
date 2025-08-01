@@ -1,418 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/newImages/logoSmall_ABCSolutions.png" />
+    <title>Access Control System ACS2200</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/templatemo-sixteen.css" />
+    <link rel="stylesheet" href="../assets/css/product-list.css" />
+    <style>
+      .features-left video {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../assets/newImages/logoSmall_ABCSolutions.png" />
-  <title>Access Control System ACS2200</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../assets/css/templatemo-sixteen.css" />
-  <link rel="stylesheet" href="../assets/css/product-list.css" />
-  <style>
-    .features-left video {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
+      .effectiveness-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 40px;
+      }
 
-    .effectiveness-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 40px;
-      margin-top: 40px;
-    }
+      .effectiveness-left {
+        flex: 1 1 400px;
+        max-width: 600px;
+      }
 
-    .effectiveness-left {
-      flex: 1 1 400px;
-      max-width: 600px;
-    }
+      .effectiveness-left h2 {
+        color: #002776;
+        font-weight: 800;
+        font-size: 28px;
+      }
 
-    .effectiveness-left h2 {
-      color: #002776;
-      font-weight: 800;
-      font-size: 28px;
-    }
+      .effectiveness-divider {
+        border: none;
+        border-top: 2px solid #ccc;
+        width: 60px;
+        margin: 10px 0;
+      }
 
-    .effectiveness-divider {
-      border: none;
-      border-top: 2px solid #ccc;
-      width: 60px;
-      margin: 10px 0;
-    }
+      .effectiveness-block {
+        margin-bottom: 20px;
+      }
 
-    .effectiveness-block {
-      margin-bottom: 20px;
-    }
+      .effectiveness-title {
+        font-weight: bold;
+        color: #002776;
+      }
 
-    .effectiveness-title {
-      font-weight: bold;
-      color: #002776;
-    }
+      .effectiveness-right {
+        flex: 1 1 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .effectiveness-right {
-      flex: 1 1 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+      .image-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .image-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      .image-wrapper img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
 
-    .image-wrapper img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+      /* Nút chuyển ảnh */
+      .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 50%;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 10;
+      }
 
-    /* Nút chuyển ảnh */
-    .nav-button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      font-size: 24px;
-      cursor: pointer;
-      border-radius: 50%;
-      opacity: 0;
-      transition: 0.3s;
-      z-index: 10;
-    }
+      .nav-button.prev {
+        left: 10px;
+      }
 
-    .nav-button.prev {
-      left: 10px;
-    }
+      .nav-button.next {
+        right: 10px;
+      }
 
-    .nav-button.next {
-      right: 10px;
-    }
+      .image-wrapper:hover .nav-button {
+        opacity: 1;
+      }
+    </style>
+  </head>
 
-    .image-wrapper:hover .nav-button {
-      opacity: 1;
-    }
-  </style>
-</head>
-
-<body>
-  <header class="">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <div class="logo">
-            <img class="logo-image" src="../assets/newImages/ABCS_Logo.png" alt="ABC's Clothing Logo" />
+  <body>
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">
+            <div class="logo">
+              <img
+                class="logo-image"
+                src="../assets/newImages/ABCS_Logo.png"
+                alt="ABC's Clothing Logo"
+              />
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <img
+                src="../assets/newImages/icons8-menu-50.png"
+                alt="Menu Icon"
+              />
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html"
+                  >Trang chủ
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="../products.html">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../about.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact.html">Liên hệ</a>
+              </li>
+            </ul>
           </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">
-            <img src="../assets/newImages/icons8-menu-50.png" alt="Menu Icon" />
-          </span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Trang chủ
-                <span class="sr-only">(current)</span>
-              </a>
+        </div>
+      </nav>
+    </header>
+    <div class="page-heading products-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 banner">
+            <div class="text-content">
+              <h2>Sản phẩm</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-pro">
+      <div class="row">
+        <div class="left">
+          <h1>HỆ THỐNG KIỂM SOÁT RA VÀO</h1>
+          <hr
+            style="border-top: 2px solid #ccc; width: 60px; margin: 10px auto"
+          />
+          <h2>Access Control System ACS2200</h2>
+
+          <!-- Nút Mua hàng -->
+          <button id="buyBtn" class="buy-button">Mua hàng</button>
+
+          <!-- Hộp thoại hiện giá và thông tin -->
+          <div id="buyModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Access Control System ACS2200</h2>
+              <h3>Giá: 30.000.000 VNĐ</h3>
+              <p>Vui lòng liên hệ đặt hàng:</p>
+              <ul>
+                <li>SĐT: 028 2200 5526 (Mr. Nhân)</li>
+                <li>Email: infos.abcsolutions@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="#"
+            ><img src="../assets/products/ACS_Device-1.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <hr style="border: none; border-top: 1px solid #ddd; margin: 40px 0" />
+      <h3>Thông số kỹ thuật</h3>
+      <hr style="border-top: 2px solid #ccc; width: 60px; margin-left: 0" />
+      <div class="spec-grid">
+        <div class="spec-group">
+          <div class="spec-title">Thiết bị đi kèm</div>
+          <p>
+            Khóa chốt điện 12V<br />Điều khiển nguồn điện<br />220VAC đến 12VDC
+            5A
+          </p>
+          <div class="spec-title">Màn hình giao tiếp</div>
+          <p>Màn hình cảm ứng LCD 7 inch</p>
+          <div class="spec-title">Kích thước</div>
+          <p>235x126x34mm</p>
+        </div>
+        <div class="spec-group">
+          <div class="spec-title">Lưu trữ</div>
+          <p>T1000 thẻ NFC<br />200 dấu vân tay<br />200 mật khẩu</p>
+          <div class="spec-title">Loại cửa</div>
+          <p>Cửa văn phòng, cửa gỗ, cửa an ninh,...</p>
+          <div class="spec-title">Âm thanh thông báo</div>
+          <p>Tùy chỉnh âm lượng và bật/tắt</p>
+        </div>
+        <div class="spec-group">
+          <div class="spec-title">Nguồn điện</div>
+          <p>Pin Li-po 3.7V 2200mAh<br />Pin 12V 9Ah</p>
+          <div class="spec-title">Phương pháp mở khóa (bảo vệ)</div>
+          <p>Thẻ NFC, Dấu vân tay, Mật khẩu, Khóa cơ sở</p>
+          <div class="spec-title">Hoạt động</div>
+          <p>24/7</p>
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="features-left">
+          <video id="slideshow-video" controls autoplay muted loop>
+            <source
+              src="../assets/products/ACS_Introduce_20231013.mp4"
+              type="video/mp4"
+            />
+            Trình duyệt của bạn không hỗ trợ video.
+          </video>
+        </div>
+
+        <div class="features-right">
+          <h3>Các tính năng</h3>
+          <hr style="border-top: 2px solid #ccc; width: 60px; margin-left: 0" />
+          <ul>
+            <li>
+              Đăng ký/Hủy quyền truy cập của người dùng trực tiếp trên thiết bị
+              hoặc từ xa thông qua ứng dụng quản trị
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="../products.html">Sản phẩm</a>
+            <li>Thiết lập lịch khai trương cá nhân (dấu vân tay, thẻ)</li>
+            <li>Thiết lập một lịch trình theo thời gian biểu</li>
+            <li>Hệ thống có cơ chế mã hóa thẻ bảo mật 2 cấp</li>
+            <li>
+              Chế độ hiển thị hoạt động phòng theo lịch trình trên màn hình cảm
+              ứng 7 inch
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../about.html">Giới thiệu</a>
+            <li>
+              Hệ thống giữ cửa cho học sinh vào lớp học rất linh hoạt và có thể
+              được cấu hình bởi giảng viên
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contact.html">Liên hệ</a>
+            <li>
+              Hoạt động theo chức năng của phòng: phòng học, phòng thí nghiệm,
+              thư viện, ...
             </li>
           </ul>
         </div>
       </div>
-    </nav>
-  </header>
 
-  <div class="container-pro">
-    <div class="row">
-      <div class="left">
-        <h1>GIẢI PHÁP QUẢN LÝ TRUY CẬP</h1>
-        <hr style="border-top: 2px solid #ccc; width: 60px; margin: 10px auto" />
-        <h2>Access Control System ACS2200</h2>
+      <div class="effectiveness-section">
+        <div class="effectiveness-left">
+          <h2>Hiệu quả đạt được</h2>
+          <hr class="effectiveness-divider" />
 
-        <!-- Nút Mua hàng -->
-        <button id="buyBtn" class="buy-button">Mua hàng</button>
+          <div class="effectiveness-block">
+            <p class="effectiveness-title">Chấm công</p>
+            <p>
+              Chấm công/tham dự dựa trên lịch trình, lớp học, người dùng, thời
+              gian.
+            </p>
+          </div>
 
-        <!-- Hộp thoại hiện giá và thông tin -->
-        <div id="buyModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>
-              Access Control System ACS2200
-            </h2>
-            <h3>Giá: 30.000.000 VNĐ</h3>
-            <p>Vui lòng liên hệ để đặt hàng:</p>
-            <ul>
-              <li>SĐT: 028 2200 5526 (Mr. Nhân)</li>
-              <li>Email: infos.abcsolutions@gmail.com</li>
-            </ul>
+          <div class="effectiveness-block">
+            <p class="effectiveness-title">Đánh giá hiệu quả sử dụng</p>
+            <p>
+              Phân tích lưu lượng phòng vào/ra; Thời gian sử dụng phòng trong
+              khoảng thời gian (sử dụng tối ưu).
+            </p>
+          </div>
+
+          <div class="effectiveness-block">
+            <p class="effectiveness-title">
+              Chủ động phân bổ phòng, đóng/mở theo thẩm quyền
+            </p>
+            <p>
+              Hoạt động tích cực, không phụ thuộc/chờ đợi; người dùng được phân
+              cấp
+            </p>
+          </div>
+
+          <div class="effectiveness-block">
+            <p class="effectiveness-title">
+              Thống kê, phân tích và quản lý hệ thống
+            </p>
+            <p>
+              Phân tích hiệu quả phòng thông qua các báo cáo, biểu đồ và dữ liệu
+              hoạt động phòng.
+            </p>
+          </div>
+        </div>
+
+        <div class="effectiveness-right">
+          <div class="image-wrapper">
+            <img
+              id="effectiveness-image"
+              src="../assets/products/ACS_App_AccessHistory_Laptop-1822x945_c.png"
+              alt="Effectiveness Image"
+            />
+            <button class="nav-button prev" onclick="prevEffectivenessImage()">
+              &#10094;
+            </button>
+            <button class="nav-button next" onclick="nextEffectivenessImage()">
+              &#10095;
+            </button>
           </div>
         </div>
       </div>
-      <div class="right">
-        <a href="#"><img src="../assets/products/ACS_Device-1.png" alt="" /></a>
-      </div>
-    </div>
-    <hr style="border: none; border-top: 1px solid #ddd; margin: 40px 0" />
-    <h3>Thông số kỹ thuật</h3>
-    <hr style="border-top: 2px solid #ccc; width: 60px; margin-left: 0" />
-    <div class="spec-grid">
-      <div class="spec-group">
-        <div class="spec-title">Thiết bị đi kèm</div>
-        <p>
-          Khóa chốt điện 12V<br />Điều khiển nguồn điện<br />220VAC đến 12VDC
-          5A
-        </p>
-        <div class="spec-title">Màn hình giao tiếp</div>
-        <p>Màn hình cảm ứng LCD 7 inch</p>
-        <div class="spec-title">Kích thước</div>
-        <p>235x126x34mm</p>
-      </div>
-      <div class="spec-group">
-        <div class="spec-title">Lưu trữ</div>
-        <p>T1000 thẻ NFC<br />200 dấu vân tay<br />200 mật khẩu</p>
-        <div class="spec-title">Loại cửa</div>
-        <p>Cửa văn phòng, cửa gỗ, cửa an ninh,...</p>
-        <div class="spec-title">Âm thanh thông báo</div>
-        <p>Tùy chỉnh âm lượng và bật/tắt</p>
-      </div>
-      <div class="spec-group">
-        <div class="spec-title">Nguồn điện</div>
-        <p>Pin Li-po 3.7V 2200mAh<br />Pin 12V 9Ah</p>
-        <div class="spec-title">Phương pháp mở khóa (bảo vệ)</div>
-        <p>Thẻ NFC, Dấu vân tay, Mật khẩu, Khóa cơ sở</p>
-        <div class="spec-title">Hoạt động</div>
-        <p>24/7</p>
-      </div>
     </div>
 
-    <div class="features-row">
-      <div class="features-left">
-        <video id="slideshow-video" controls autoplay muted loop>
-          <source src="../assets/products/ACS_Introduce_20231013.mp4" type="video/mp4" />
-          Trình duyệt của bạn không hỗ trợ video.
-        </video>
-      </div>
-
-      <div class="features-right">
-        <h3>Các tính năng</h3>
-        <hr style="border-top: 2px solid #ccc; width: 60px; margin-left: 0" />
-        <ul>
-          <li>
-            Đăng ký/Hủy quyền truy cập của người dùng trực tiếp trên thiết bị
-            hoặc từ xa thông qua ứng dụng quản trị
-          </li>
-          <li>Thiết lập lịch khai trương cá nhân (dấu vân tay, thẻ)</li>
-          <li>Thiết lập một lịch trình theo thời gian biểu</li>
-          <li>Hệ thống có cơ chế mã hóa thẻ bảo mật 2 cấp</li>
-          <li>
-            Chế độ hiển thị hoạt động phòng theo lịch trình trên màn hình cảm
-            ứng 7 inch
-          </li>
-          <li>
-            Hệ thống giữ cửa cho học sinh vào lớp học rất linh hoạt và có thể
-            được cấu hình bởi giảng viên
-          </li>
-          <li>
-            Hoạt động theo chức năng của phòng: phòng học, phòng thí nghiệm,
-            thư viện, ...
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="effectiveness-section">
-      <div class="effectiveness-left">
-        <h2>Hiệu quả đạt được</h2>
-        <hr class="effectiveness-divider" />
-
-        <div class="effectiveness-block">
-          <p class="effectiveness-title">Chấm công</p>
-          <p>
-            Chấm công/tham dự dựa trên lịch trình, lớp học, người dùng, thời
-            gian.
-          </p>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>Các lĩnh vực hoạt động</h4>
+          <ul class="activity-list">
+            <li>Mua và bán thiết bị và máy móc;</li>
+            <li>Thiết kế phần cứng mạch ứng dụng;</li>
+            <li>Xuất bản phần mềm;</li>
+            <li>...</li>
+          </ul>
         </div>
 
-        <div class="effectiveness-block">
-          <p class="effectiveness-title">Đánh giá hiệu quả sử dụng</p>
-          <p>
-            Phân tích lưu lượng phòng vào/ra; Thời gian sử dụng phòng trong
-            khoảng thời gian (sử dụng tối ưu).
-          </p>
+        <div class="footer-column">
+          <h4>Liên hệ</h4>
+          <div class="contact-info">
+            <p><i class="fas fa-phone"></i> (028) 22 00 55 26</p>
+            <p><i class="fas fa-envelope"></i> infos.abcsolutions@gmail.com</p>
+          </div>
         </div>
 
-        <div class="effectiveness-block">
-          <p class="effectiveness-title">
-            Chủ động phân bổ phòng, đóng/mở theo thẩm quyền
-          </p>
-          <p>
-            Hoạt động tích cực, không phụ thuộc/chờ đợi; người dùng được phân
-            cấp
-          </p>
-        </div>
-
-        <div class="effectiveness-block">
-          <p class="effectiveness-title">
-            Thống kê, phân tích và quản lý hệ thống
-          </p>
-          <p>
-            Phân tích hiệu quả phòng thông qua các báo cáo, biểu đồ và dữ liệu
-            hoạt động phòng.
-          </p>
+        <div class="footer-column">
+          <h4>ABC SOLUTIONS</h4>
+          <div class="address">
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 82/2B, Đường Huỳnh Văn Nghệ,
+              Phường 15 , Quận Tân Bình,Thành phố Hồ Chí Minh
+            </p>
+          </div>
+          <a
+            href="https://www.google.com/maps/place/82%2F2B+Huỳnh+Văn+Nghệ,+Phường+15,+Tân+Bình,+Hồ+Chí+Minh/@10.8186142,106.6316047,17z/data=!3m1!4b1!4m6!3m5!1s0x31752961a3b95ad1:0x7aa76dfeaa11809a!8m2!3d10.8186142!4d106.6316047!16s%2Fg%2F11k46vjyzg?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            class="map-link"
+          >
+            <i class="fas fa-map-marked-alt"></i> Mở trong Google map
+          </a>
         </div>
       </div>
 
-      <div class="effectiveness-right">
-        <div class="image-wrapper">
-          <img id="effectiveness-image" src="../assets/products/ACS_App_AccessHistory_Laptop-1822x945_c.png"
-            alt="Effectiveness Image" />
-          <button class="nav-button prev" onclick="prevEffectivenessImage()">
-            &#10094;
-          </button>
-          <button class="nav-button next" onclick="nextEffectivenessImage()">
-            &#10095;
-          </button>
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="footer-logo">
+            <img
+              src="../assets/newImages/ABCS_Logo.png"
+              alt="ABC SOLUTIONS Logo"
+            />
+          </div>
+          <div class="copyright">
+            <p>&copy; 2025 ABC SOLUTIONS. All rights reserved.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </footer>
+    <script>
+      const effectivenessImages = [
+        "../assets/products/ACS_App_AccessHistory_Laptop-1822x945_c.png",
+        "../assets/products/ACS_App_AccessStatistics_Laptop-1822x945_c.png",
+        "../assets/products/ACS_App_ActivityDensity_Laptop-1822x945_c.png",
+      ];
+      let effIndex = 0;
 
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-column">
-        <h4>Các lĩnh vực hoạt động</h4>
-        <ul class="activity-list">
-          <li>Mua và bán thiết bị và máy móc;</li>
-          <li>Thiết kế phần cứng mạch ứng dụng;</li>
-          <li>Xuất bản phần mềm;</li>
-          <li>...</li>
-        </ul>
-      </div>
+      function showEffectivenessImage(index) {
+        const img = document.getElementById("effectiveness-image");
+        if (img) img.src = effectivenessImages[index];
+      }
 
-      <div class="footer-column">
-        <h4>Liên hệ</h4>
-        <div class="contact-info">
-          <p><i class="fas fa-phone"></i> (028) 22 00 55 26</p>
-          <p><i class="fas fa-envelope"></i> infos.abcsolutions@gmail.com</p>
-        </div>
-      </div>
+      function prevEffectivenessImage() {
+        effIndex =
+          (effIndex - 1 + effectivenessImages.length) %
+          effectivenessImages.length;
+        showEffectivenessImage(effIndex);
+      }
 
-      <div class="footer-column">
-        <h4>ABC SOLUTIONS</h4>
-        <div class="address">
-          <p>
-            <i class="fas fa-map-marker-alt"></i> 82/2B, Đường Huỳnh Văn Nghệ,
-            Phường 15 , Quận Tân Bình,Thành phố Hồ Chí Minh
-          </p>
-        </div>
-        <a href="https://www.google.com/maps/place/82%2F2B+Huỳnh+Văn+Nghệ,+Phường+15,+Tân+Bình,+Hồ+Chí+Minh/@10.8186142,106.6316047,17z/data=!3m1!4b1!4m6!3m5!1s0x31752961a3b95ad1:0x7aa76dfeaa11809a!8m2!3d10.8186142!4d106.6316047!16s%2Fg%2F11k46vjyzg?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank" class="map-link">
-          <i class="fas fa-map-marked-alt"></i> Mở trong Google map
-        </a>
-      </div>
-    </div>
+      function nextEffectivenessImage() {
+        effIndex = (effIndex + 1) % effectivenessImages.length;
+        showEffectivenessImage(effIndex);
+      }
+    </script>
 
-    <div class="footer-bottom">
-      <div class="footer-bottom-content">
-        <div class="footer-logo">
-          <img src="../assets/newImages/ABCS_Logo.png" alt="ABC SOLUTIONS Logo" />
-        </div>
-        <div class="copyright">
-          <p>&copy; 2025 ABC SOLUTIONS. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-    const effectivenessImages = [
-      "../assets/products/ACS_App_AccessHistory_Laptop-1822x945_c.png",
-      "../assets/products/ACS_App_AccessStatistics_Laptop-1822x945_c.png",
-      "../assets/products/ACS_App_ActivityDensity_Laptop-1822x945_c.png",
-    ];
-    let effIndex = 0;
+    <script>
+      const modal = document.getElementById("buyModal");
+      const btn = document.getElementById("buyBtn");
+      const span = document.getElementsByClassName("close")[0];
 
-    function showEffectivenessImage(index) {
-      const img = document.getElementById("effectiveness-image");
-      if (img) img.src = effectivenessImages[index];
-    }
+      btn.onclick = function () {
+        modal.style.display = "flex";
+      };
 
-    function prevEffectivenessImage() {
-      effIndex =
-        (effIndex - 1 + effectivenessImages.length) %
-        effectivenessImages.length;
-      showEffectivenessImage(effIndex);
-    }
-
-    function nextEffectivenessImage() {
-      effIndex = (effIndex + 1) % effectivenessImages.length;
-      showEffectivenessImage(effIndex);
-    }
-  </script>
-
-  <script>
-    const modal = document.getElementById("buyModal");
-    const btn = document.getElementById("buyBtn");
-    const span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function () {
-      modal.style.display = "block";
-    };
-
-    span.onclick = function () {
-      modal.style.display = "none";
-    };
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
+      span.onclick = function () {
         modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        window.scrollTo({
+          top: 250,
+          behavior: "smooth",
+        });
+      });
+    </script>
+
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/owl.js"></script>
+    <script src="../assets/js/slick.js"></script>
+    <script src="../assets/js/isotope.js"></script>
+    <script src="../assets/js/accordions.js"></script>
+
+    <script language="text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t) {
+        //declaring the array outside of the
+        if (!cleared[t.id]) {
+          // function makes it static and global
+          cleared[t.id] = 1; // you could use true and false, but that's more typing
+          t.value = ""; // with more chance of typos
+          t.style.color = "#fff";
+        }
       }
-    };
-  </script>
-
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Additional Scripts -->
-  <script src="../assets/js/custom.js"></script>
-  <script src="../assets/js/owl.js"></script>
-  <script src="../assets/js/slick.js"></script>
-  <script src="../assets/js/isotope.js"></script>
-  <script src="../assets/js/accordions.js"></script>
-
-  <script language="text/Javascript">
-    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t) {
-      //declaring the array outside of the
-      if (!cleared[t.id]) {
-        // function makes it static and global
-        cleared[t.id] = 1; // you could use true and false, but that's more typing
-        t.value = ""; // with more chance of typos
-        t.style.color = "#fff";
-      }
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

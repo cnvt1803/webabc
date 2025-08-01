@@ -11,15 +11,19 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
-  padding-top: 100px;
+  border-top: 2px solid #e0e0e0;
+  margin-top: 0px;
 }
-
 .row {
   display: flex;
   align-items: center;
-  justify-content: center; /* Thay space-between bằng center */
-  padding: 20px;
-  gap: 40px; /* Thêm khoảng cách giữa 2 phần */
+  justify-content: center;
+  gap: 48px;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .left {
@@ -167,51 +171,57 @@ ul.with-tick li::before {
 }
 
 .modal {
-  display: none;
   position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0, 0, 0, 0.5);
-  padding-top: 60px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .modal-content {
-  background-color: #ffffff;
-  margin: auto;
-  padding: 30px 40px;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.3s ease-in-out;
+  background-color: #fff;
+  padding: 36px 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
   font-family: "Segoe UI", sans-serif;
   position: relative;
+  animation: fadeScaleIn 0.35s ease-out;
+  text-align: center;
 }
+
 .modal-content h2 {
-  margin-top: 20px !important;
-}
-.modal-content h3 {
-  margin-top: 0px !important;
+  margin: 0 0 12px;
   font-size: 24px;
-  color: #003366;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #111;
+}
+
+.modal-content h3 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  color: #007bff;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .modal-content p {
+  margin: 0 0 5px;
   color: #666;
   font-size: 15px;
-  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .modal-content ul {
-  padding-left: 0;
   list-style: none;
+  padding: 0;
+  margin: 0;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #222;
 }
 
@@ -220,31 +230,33 @@ ul.with-tick li::before {
 }
 
 .close {
-  color: #999;
+  color: #bbb;
   position: absolute;
   top: 16px;
   right: 20px;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .close:hover {
   color: #000;
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
-@keyframes fadeIn {
+/* Animation mới mượt hơn */
+@keyframes fadeScaleIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: scale(0.95) translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1) translateY(0);
   }
 }
+
 @media (max-width: 991px) {
   .container-pro {
     padding: 60px 20px 20px 20px;
